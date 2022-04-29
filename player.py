@@ -9,6 +9,7 @@ class Gender(Enum):
 
 
 class Player(BaseModel):
+    id: PositiveInt
     rank: PositiveInt
     last_name: str
     birth_date: date
@@ -16,7 +17,8 @@ class Player(BaseModel):
     gender: Gender
 
 
-player1 = Player(rank=-12,
+player1 = Player(id=42,
+                 rank=12,
                  last_name="Joe",
                  birth_date="1979-04-23",
                  first_name="Amri",

@@ -3,12 +3,17 @@ from enum import Enum
 from pydantic import BaseModel
 
 
+class Gender(Enum):
+    Mail = "H"
+    Female = "F"
+
+
 class Player(BaseModel):
     rank: int
     last_name: str
     birth_date: date
     first_name: str
-    gender: str
+    gender: Gender
 
 
 player1 = Player(rank=12,

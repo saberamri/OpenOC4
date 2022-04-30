@@ -14,9 +14,6 @@ class Gender(Enum):
     Female = "F"
 
 
-
-
-
 class Player(BaseModel):
     """
     The Player() class inherits from the BaseModel() class

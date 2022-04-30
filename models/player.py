@@ -27,7 +27,6 @@ class Player(BaseModel):
     first_name: constr(strict=True, min_length=2, max_length=12)
     gender: Gender
 
-
     @validator("birth_date")
     def check_age(cls, v):
         """verify that participants are at least 18 years old.
@@ -42,12 +41,3 @@ class Player(BaseModel):
         if age < 18:
             raise ValueError('age must be > 18')
         return v
-
-
-player1 = Player(id=42,
-                 rank=30,
-                 last_name="Joe",
-                 birth_date="2001-04-23",
-                 first_name="Amri",
-                 gender="H")
-print(player1)

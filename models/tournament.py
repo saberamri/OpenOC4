@@ -3,6 +3,8 @@ from enum import Enum
 from typing import List
 from pydantic import BaseModel, PositiveInt, constr
 
+from models.round import Round
+
 
 class TimeControl(Enum):
     """
@@ -33,3 +35,4 @@ class Tournament(BaseModel):
     description: constr(strict=True, max_length=50) = ""
     players: List[PositiveInt]
     timeconrol: TimeControl
+    rounds: List[Round] = []

@@ -10,4 +10,8 @@ class Match(BaseModel):
     """
     player1_id: PositiveInt
     player2_id: PositiveInt
-    score_player1: float
+    score_player1: float = None
+
+    @property
+    def score_player2(self):
+        return 1.0 - self.score_player1

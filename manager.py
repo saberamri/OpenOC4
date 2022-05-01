@@ -16,5 +16,5 @@ class Manager:
         with open(path) as json_data:
             data_dict = json.load(json_data)
             for item_data in data_dict:
-                item = Player(**item_data)
+                item = self.item_type(**item_data)
                 item = self.items[item.id]

@@ -9,6 +9,7 @@ class Manager:
 
     def __init__(self, item_type: Any):
         self.item_type = item_type
+        self.load_from_jason()
 
     def load_from_jason(self, path: str):
         with open(path) as json_data:

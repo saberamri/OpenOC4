@@ -1,4 +1,5 @@
 import json
+from typing import Any
 from pydantic import BaseModel
 
 from models.player import Player
@@ -6,10 +7,10 @@ from models.player import Player
 
 class Manager:
 
-    def __init__(self):
-        pass
+    def __init__(self, item_type: Any):
+        self.item_type = item_type
 
-    def load_frm_jason(self, path: str):
+    def load_from_jason(self, path: str):
         with open(path) as json_data:
             data_dict = json.load(json_data)
             ls = []

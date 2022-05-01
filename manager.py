@@ -17,3 +17,4 @@ class Manager:
             data_dict = json.load(json_data)
             for item_data in data_dict:
                 item = Player(**item_data)
+                item = self.items[item.id]

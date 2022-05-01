@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name":"tournament1",
         "place":"Paris",
         "number_of_rounds":2,
@@ -7,6 +8,7 @@
         "timeconrol":1
     },
     {
+        "id": 2,
         "name":"tournament2",
         "place":"Rome",
         "number_of_rounds":2,

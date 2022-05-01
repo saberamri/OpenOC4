@@ -17,5 +17,5 @@ class Menu(View):
             title (str): title
             options (List[str]): options list
         """
-        content = "\n".join(options)
+        content = "\n".join(["1-" + option for option in options])
         super().__init__(title=title, content=content)

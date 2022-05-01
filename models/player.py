@@ -22,9 +22,9 @@ class Player(BaseModel):
     """
     id: PositiveInt
     rank: conint(strict=True, gt=0, le=3000)
-    last_name: constr(strict=True, min_length=2, max_length=12)
+    last_name: constr(strict=True, min_length=2, max_length=20)
     birth_date: date
-    first_name: constr(strict=True, min_length=2, max_length=12)
+    first_name: constr(strict=True, min_length=2, max_length=20)
     gender: Gender
 
     @validator("birth_date")

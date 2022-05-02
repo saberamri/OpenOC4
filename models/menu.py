@@ -17,5 +17,5 @@ class Menu(View):
             title (str): title
             options (List[str]): options list
         """
-        content = "\n".join([f"{i}.  {option}" for i, option in enumerate(options, start=1)])
+        content = "\n".join([f"{i}.  {option.upper()}" for i, option in enumerate(options, start=1)])
         super().__init__(title=title, content=content)

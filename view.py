@@ -9,7 +9,7 @@ class View:
             content (str): view content: allow empty content
             is_blocking (bool): blocking parameter: stop display and 
         """
-        self.title = title
+        self.title = title.upper()
         self.content = content
 
     def show(self):

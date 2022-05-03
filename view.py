@@ -22,4 +22,5 @@ class View:
         os.system("cls")
         print(self.title)
         print("-" * len(self.title))
-        print(self.content)
+        if self.content:
+            print(self.content)

@@ -1,3 +1,6 @@
+import os
+
+
 class View:
     """
     view contains two attributes title and content and a show class method to display them.
@@ -17,6 +20,7 @@ class View:
         - display of title and content separated by a line
         - console cls after each display
         """
+        os.system("cls")
         print(self.title)
         print("-" * len(self.title))
         print(self.content)

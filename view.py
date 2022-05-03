@@ -5,7 +5,7 @@ class View:
     """
     view contains two attributes title and content and a show class method to display them.
     """
-    def __init__(self, title: str, content: str):
+    def __init__(self, title: str, content: str = ""):
         """constructor
         Args:
             title (str): capitalized view title

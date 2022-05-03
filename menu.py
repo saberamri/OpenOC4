@@ -17,6 +17,7 @@ class Menu(View):
             title (str): title
             options (List[str]): options list
         """
+        self.options = options
         content = "\n".join([f"{i}.  {option}" for i, option in enumerate(options, start=1)])
         super().__init__(title=title, content=content)
 
@@ -31,6 +32,7 @@ class Menu(View):
             super().show()
             try:
                 choice = int(input(":? "))
-                return choice
+                if choice in range(1, len(self.options) + 1):
+                    return choice
             except ValueError:
                 print("entrer un choix numérique")

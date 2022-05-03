@@ -29,8 +29,8 @@ class Menu(View):
         """
         while True:
             super().show()
-            choice = input(":? ")
             try:
+                choice = input(":? ")
                 return int(choice)
             except ValueError:
                 print("entrer un choix numérique")

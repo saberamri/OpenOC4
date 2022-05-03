@@ -1,4 +1,4 @@
-from models.menu import Menu
+from menu import Menu
 
 # view = View(title="title 1",
 #             content= "content1")

@@ -21,8 +21,8 @@ class Menu(View):
         super().__init__(title=title, content=content)
 
     def show(self):
-        super().show()
         while True:
+            super().show()
             choice = input(":? ")
             try:
                 return int(choice)

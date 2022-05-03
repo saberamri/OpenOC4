@@ -19,3 +19,8 @@ class Menu(View):
         """
         content = "\n".join([f"{i}.  {option}" for i, option in enumerate(options, start=1)])
         super().__init__(title=title, content=content)
+
+    def show(self):
+        super().show()
+        choice = input(":? ")
+        return int(choice)

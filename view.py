@@ -9,8 +9,7 @@ class View:
         """constructor
         Args:
             title (str): capitalized view title
-            content (str): view content: allow empty content
-            is_blocking (bool): blocking parameter: stop display and 
+            content (str): view content: it is a str which allows to present the data
         """
         self.title = title.upper()
         self.content = content

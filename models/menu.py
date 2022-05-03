@@ -21,6 +21,12 @@ class Menu(View):
         super().__init__(title=title, content=content)
 
     def show(self):
+        """
+        - show title
+        - ask the user to enter a numeric choice between 1 and len(options)
+        Returns:
+            choice(int): choice returned by the user
+        """
         while True:
             super().show()
             choice = input(":? ")

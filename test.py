@@ -8,10 +8,10 @@ from menu import Menu
 # Menu(title="Bienvenue sur chess manager version 1.0",
 #      options=["Gérer les joueurs", "Gérer les tournois"]).show()
 
-Form(title="Ajouter un joueur", fields=["Nom",
+print(Form(title="Ajouter un joueur", fields=["Nom",
                                         "prénom",
                                         "annee de naissance",
                                         "mois de naissance",
                                         "jour de naissance",
                                         "sexe",
-                                        "classement"]).show()
+                                        "classement"]).show())

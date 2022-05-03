@@ -1,4 +1,4 @@
-from typing import  List
+from typing import  List, Tuple
 from view import View
 
 
@@ -8,7 +8,7 @@ class Form(View):
         - title (str): form title
         - fields: list of fields to  fill
     """
-    def __init__(self, title: str, fields: List[str]):
+    def __init__(self, title: str, fields: List[Tuple[str, str]]):
         super().__init__(title=title)
         self.fields = fields
 
@@ -21,6 +21,6 @@ class Form(View):
         """
         data = {}
         super().show()
-        for field in self.fields:
-            data[field] = input(field + "? ")
+        for name, field in self.fields:
+            data[field] = input(name + "? ")
         return data

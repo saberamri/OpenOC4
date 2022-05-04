@@ -1,5 +1,7 @@
 from form import Form
+from manager import Manager
 from menu import Menu
+from models.player import Player
 from table import Table
 
 # view = View(title="title 1",
@@ -15,6 +17,9 @@ from table import Table
 #                                         ("sexe", "gender", str),
 #                                         ("classement", "rank", int)]).show())
 
-Table(title= "liste des joueurs",
-      cols= ["id", "nom", "prénom", "classement"],
-      items= [])
+player_manager = Manager(item_type=Player)
+player_manager.load_from_jason("./Jason/players.json")
+
+Table(title="liste des joueurs",
+      cols=["id", "nom", "prénom", "classement"],
+      items=player_manager.items)

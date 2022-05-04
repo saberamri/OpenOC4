@@ -22,4 +22,4 @@ player_manager.load_from_jason("./Jason/players.json")
 
 Table(title="liste des joueurs",
       cols=["id", "nom", "prénom", "classement"],
-      items=player_manager.items)
+      items=[])

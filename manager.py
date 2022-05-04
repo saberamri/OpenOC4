@@ -38,3 +38,10 @@ class Manager:
             for item_data in data_dict:
                 item = self.item_type(**item_data)
                 self.items[item.id] = item
+
+    def all(self):
+        """convert data dict in data list and retrieve values from a dictionary
+        Returns:
+            items.values() (list): data list
+        """
+        return self.items.values

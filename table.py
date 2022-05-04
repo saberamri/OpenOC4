@@ -16,7 +16,7 @@ class Table(View):
             cols (List[str]):list of table columns
             items (List[Any]): list of items of type Any
         """
-        content = self.gen_headers(cols) + self.gen_lines(items)
+        content = self.gen_headers(cols) + self.gen_lines(cols, items)
         super().__init__(title=title, content=content)
         self.cols = cols
         self.items = items

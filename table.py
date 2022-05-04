@@ -20,6 +20,7 @@ class Table(View):
         Returns:
             headers: columns name
         """
+        headers = ""
         pass
 
     def gen_lines(self, items: List[Any]):

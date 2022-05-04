@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, List
 from view import View
 
 
@@ -7,7 +7,7 @@ class Table(View):
     Args:
         View (class): parent class
     """
-    def __init__(self, title: str, cols: str, items: Any):
+    def __init__(self, title: str, cols: List[str], items: List[Any]):
         super().__init__(title)
         self.cols = cols
         self.items = items

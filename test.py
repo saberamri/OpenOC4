@@ -21,5 +21,10 @@ player_manager = Manager(item_type=Player)
 player_manager.load_from_jason("./Jason/players.json")
 
 print(Table(title="liste des joueurs",
-      cols=["id", "classement", "nom", "date de naissance", "prénom", "sexe"],
+      cols=[("id", "id"),
+            ("classement", "rank"),
+            ("nom", "last_name"),
+            ("date de naissance", "birth_date"),
+            ("prénom", "first_name"),
+            ("sexe", "gender")],
       items=player_manager.all()).show())

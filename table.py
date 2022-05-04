@@ -42,7 +42,7 @@ class Table(View):
         """
         lines = ""
         for item in items:
-            for _, name in self.cols:
+            for _, name in cols:
                 lines += str(getattr(item, name))
             lines + "\n"
         return lines + "\n"

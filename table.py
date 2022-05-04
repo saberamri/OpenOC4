@@ -14,20 +14,25 @@ class Table(View):
         self.items = items
 
     def gen_headers(self, cols: List[str]):
-        """generate headers
+        """generate uppercase and centered headers
         Args:
             cols (List[str]): headers
         Returns:
             headers: columns name
         """
         headers = ""
-        pass
+        for col in cols:
+            headers += col.upper().center(15)
+        return headers + "\n"
 
     def gen_lines(self, items: List[Any]):
-        """generate lines
+        """generate row data with line break on each new row
         Args:
             items (List[Any]): list of items
         Returns:
             lines: data lines
         """
-        pass
+        lines = ""
+        for item in items:
+            lines += str(item) + "\n"
+        return lines + "\n"

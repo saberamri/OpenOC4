@@ -13,6 +13,14 @@ class Gender(Enum):
     Male = "H"
     Female = "F"
 
+    def __str__(self):
+        """display the values or names of the categories of the Gender() class
+        Returns:
+            names or values of the Gender catégories
+        """
+        # return self.value
+        return self.name
+
 
 class Player(BaseModel):
     """

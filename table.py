@@ -16,32 +16,31 @@ class Table(View):
             cols (List[str]):list of table columns
             items (List[Any]): list of items of type Any
         """
-        content = self.gen_headers(cols) + self.gen_lines(cols, items)
+        col_width = 18
+        content = self.gen_headers(cols, col_width) + self.gen_lines(cols, items, col_width)
         super().__init__(title=title, content=content)
         self.cols = cols
         self.items = items
 
-    def gen_headers(self, cols: List[str]):
+    def gen_headers(self, cols: List[str], col_width: int):
         """generate uppercase and centered headers
         Args:
             cols (List[str]): headers
         Returns:
             headers: columns name
         """
-        col_width = 18
         headers = ""
         for desc, _ in cols:
             headers += desc.upper().center(col_width)
         return headers + "\n"
 
-    def gen_lines(self, cols: List[str], items: List[Any]):
+    def gen_lines(self, cols: List[str], items: List[Any], col_width: int):
         """generate row data with line break on each new row
         Args:
             items (List[Any]): list of items
         Returns:
             lines: data lines
         """
-        col_width = 18
         lines = ""
         for item in items:
             for _, name in cols:

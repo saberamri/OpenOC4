@@ -41,3 +41,13 @@ class Player(BaseModel):
         if age < 18:
             raise ValueError('age must be > 18')
         return v
+
+    def __str__(self):
+        """
+        display instance values and centred them
+        """
+        result = ""
+        for item in self.dict().values():
+            result += str(item).center(10)
+        return result
+

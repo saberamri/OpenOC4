@@ -8,6 +8,14 @@ class Table(View):
         View (class): parent class
     """
     def __init__(self, title: str, cols: List[str], items: List[Any]):
+        """
+        constructor: calls the parent constructor to display title and content
+        define content as generation in headers and cols.
+        Args:
+            title (str): table title
+            cols (List[str]):list of table columns
+            items (List[Any]): list of items of type Any
+        """
         content = self.gen_headers(cols) + self.gen_lines(items)
         super().__init__(title=title, content=content)
         self.cols = cols

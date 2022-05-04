@@ -16,6 +16,8 @@ class Form(View):
         """
         - show title and not the content
         - ask for fields to fill in
+        - check input data type
+        - force the user to enter a correct value so that the form sits correctly
         Returns:
             data(dict): data dictionary filled with their real fields
         """

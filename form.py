@@ -25,6 +25,7 @@ class Form(View):
             while True:
                 try:
                     data[field] = field_type(input(desc + "? "))
+                    break
                 except ValueError:
                     print("l'entrée doit etre numérique")
         return data

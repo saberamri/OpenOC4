@@ -48,6 +48,6 @@ class Player(BaseModel):
         """
         result = ""
         for item in self.dict().values():
-            result += str(item).center(10)
+            result += str(item).center(15)
         return result
 

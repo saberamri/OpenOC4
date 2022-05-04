@@ -44,10 +44,9 @@ class Player(BaseModel):
 
     def __str__(self):
         """
-        display instance values and centred them
+        present just name and first name of the players
+        -It is useful when we are going to select the 
+         players for a tournament.
         """
-        result = ""
-        for item in self.dict().values():
-            result += str(item).center(15)
-        return result
+        return f"{self.last_name.upper()}, {self.first_name.capitalize()}"
 

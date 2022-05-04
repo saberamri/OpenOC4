@@ -28,9 +28,10 @@ class Table(View):
         Returns:
             headers: columns name
         """
+        col_width = 18
         headers = ""
         for desc, _ in cols:
-            headers += desc.upper().center(15)
+            headers += desc.upper().center(col_width)
         return headers + "\n"
 
     def gen_lines(self, cols: List[str], items: List[Any]):
@@ -40,9 +41,10 @@ class Table(View):
         Returns:
             lines: data lines
         """
+        col_width = 18
         lines = ""
         for item in items:
             for _, name in cols:
-                lines += str(getattr(item, name)).center(15)
+                lines += str(getattr(item, name)).center(col_width)
             lines += "\n"
         return lines

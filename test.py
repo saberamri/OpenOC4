@@ -20,6 +20,6 @@ from table import Table
 player_manager = Manager(item_type=Player)
 player_manager.load_from_jason("./Jason/players.json")
 
-Table(title="liste des joueurs",
+print(Table(title="liste des joueurs",
       cols=["id", "nom", "prénom", "classement"],
-      items=[])
+      items=player_manager.all()))

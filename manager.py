@@ -44,4 +44,4 @@ class Manager:
         Returns:
             items.values() (list): data list
         """
-        return self.items.values
+        return self.items.values()

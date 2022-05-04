@@ -22,5 +22,8 @@ class Form(View):
         data = {}
         super().show()
         for desc, field, field_type in self.fields:
-            data[field] = field_type(input(desc + "? "))
+            try:
+                data[field] = field_type(input(desc + "? "))
+            except ValueError:
+                print("l'entrée doit etre numérique")
         return data

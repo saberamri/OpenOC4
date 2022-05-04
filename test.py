@@ -22,4 +22,4 @@ player_manager.load_from_jason("./Jason/players.json")
 
 print(Table(title="liste des joueurs",
       cols=["id", "nom", "prénom", "classement"],
-      items=player_manager.all()))
+      items=player_manager.all()).show())

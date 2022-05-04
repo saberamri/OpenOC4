@@ -22,5 +22,5 @@ class Form(View):
         data = {}
         super().show()
         for desc, field, field_type in self.fields:
-            data[field] = input(desc + "? ")
+            data[field] = field_type(input(desc + "? "))
         return data

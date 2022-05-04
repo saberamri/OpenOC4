@@ -33,7 +33,7 @@ class Table(View):
             headers += desc.upper().center(15)
         return headers + "\n"
 
-    def gen_lines(self, items: List[Any]):
+    def gen_lines(self, cols: List[str], items: List[Any]):
         """generate row data with line break on each new row
         Args:
             items (List[Any]): list of items

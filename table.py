@@ -33,7 +33,7 @@ class Table(View):
         headers = ""
         for desc, _ in cols:
             headers += desc.upper().center(col_width)
-        return headers + "\n"
+        return headers + "\n" + "="*len(headers) + "\n"
 
     @staticmethod
     def gen_lines(cols: List[str], items: List[Any], col_width: int):

@@ -1,5 +1,5 @@
 from typing import List
-from view import View
+from views.view import View
 
 
 class Menu(View):

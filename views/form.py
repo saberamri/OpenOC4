@@ -1,5 +1,5 @@
 from typing import  Any, List, Tuple
-from view import View
+from views.view import View
 
 
 class Form(View):

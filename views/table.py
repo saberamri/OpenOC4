@@ -1,5 +1,5 @@
 from typing import Any, List
-from view import View
+from views.view import View
 
 
 class Table(View):

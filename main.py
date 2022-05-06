@@ -1,7 +1,11 @@
-from manager import Manager
-from models.player import Player
+from menu import Menu
 
 
-player_manager = Manager(item_type=Player)
-player_manager.load_from_jason("./Jason/players.json")
-print(player_manager.items)
+def main():
+    """principal controller
+    """
+    Menu(title="Bienvenue sur chess Manager version 1.0",
+         options=["Gérer les joueurs", "Gérer les tournois"]).show()
+
+
+main()

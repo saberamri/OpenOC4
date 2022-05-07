@@ -1,4 +1,4 @@
-from main_form import MainForm
+from player_form import PlayerForm
 from views.form import Form
 from manager import Manager
 from views.menu import Menu
@@ -38,4 +38,4 @@ from views.table import Table
 #              ("jour de naisance", "birth_day", int),
 #              ("sexe", "gender", str),
 #              ("classement", "rank", int)]).show()
-MainForm().show()
+PlayerForm().show()

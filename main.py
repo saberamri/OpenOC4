@@ -14,7 +14,7 @@ def main():
             PlayerMenu().show()
         case 2:
             TournamentMenu().show()
-        # case _:
-        #     quit()
+        case 3:
+            quit()
 
 main()

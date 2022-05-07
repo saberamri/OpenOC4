@@ -36,8 +36,7 @@ class Manager:
         with open(path) as json_data:
             data_dict = json.load(json_data)
             for item_data in data_dict:
-                item = self.item_type(**item_data)
-                self.items[item.id] = item
+                self.create()
 
     def all(self):
         """convert data dict in data list and retrieve values from a dictionary
@@ -45,3 +44,7 @@ class Manager:
             items.values() (list): data list
         """
         return self.items.values()
+
+    def create(self, item_data):
+        item = self.item_type(**item_data)
+        self.items[item.id] = item

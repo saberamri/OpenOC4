@@ -3,6 +3,20 @@ from player_menu import PlayerMenu
 from tournament_menu import TournmanetMenu
 
 
+def players():
+    choice = PlayerMenu().show()
+    match choice:
+        case 5:
+            main()
+
+
+def tournaments():
+    choice = TournmanetMenu().show()
+    match choice:
+        case 4:
+            main()
+
+
 def main():
     """principal controller
     """
@@ -11,13 +25,9 @@ def main():
     choice = MainMenu().show()
     match choice:
         case 1:
-            choice = PlayerMenu().show()
-            match choice:
-                case 5:
-                    main()
+            players()
         case 2:
-            choice = TournmanetMenu().show()
-            match choice:
-                case 4:
-                    main()
+            tournaments()
+
+
 main()

@@ -1,6 +1,6 @@
 from main_menu import MainMenu
 from player_menu import PlayerMenu
-from views.menu import Menu
+from tournament_menu import TournmanetMenu
 
 
 def main():
@@ -13,6 +13,6 @@ def main():
         case 1:
             PlayerMenu().show()
         case 2:
-            TournamentMenu().show()
+            TournmanetMenu().show()
 
 main()

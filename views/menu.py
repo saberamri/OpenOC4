@@ -31,7 +31,7 @@ class Menu(View):
         while True:
             super().show()
             try:
-                choice = int(input(":? "))
+                choice = int(input(":  "))
                 if choice in range(1, len(self.options) + 1):
                     return choice
             except ValueError:

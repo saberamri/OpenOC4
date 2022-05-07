@@ -45,6 +45,6 @@ class Manager:
         """
         return self.items.values()
 
-    def create(self, **kwargs):
+    def create(self, *args, **kwargs):
         item = self.item_type(**kwargs)
         self.items[item.id] = item

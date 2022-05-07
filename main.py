@@ -13,7 +13,7 @@ def main():
         case 1:
             choice = PlayerMenu().show()
             match choice:
-                case 4:
+                case 5:
                     main()
         case 2:
             TournmanetMenu().show()

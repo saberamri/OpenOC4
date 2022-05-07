@@ -1,3 +1,4 @@
+from main_form import MainForm
 from views.form import Form
 from manager import Manager
 from views.menu import Menu
@@ -29,11 +30,12 @@ from views.table import Table
 #             ("sexe", "gender")],
 #       items=player_manager.all()).show())
 
-Form(title="Ajouter un joueur",
-     fields=[("Nom", "last_name", str),
-             ("Prénom", "first_name", str),
-             ("année de naissance", "birth_year", int),
-             ("mois de naissance", "birth_month", int),
-             ("jour de naisance", "birth_day", int),
-             ("sexe", "gender", str),
-             ("classement", "rank", int)]).show()
+# Form(title="Ajouter un joueur",
+#      fields=[("Nom", "last_name", str),
+#              ("Prénom", "first_name", str),
+#              ("année de naissance", "birth_year", int),
+#              ("mois de naissance", "birth_month", int),
+#              ("jour de naisance", "birth_day", int),
+#              ("sexe", "gender", str),
+#              ("classement", "rank", int)]).show()
+MainForm().show()

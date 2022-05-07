@@ -16,6 +16,8 @@ def main():
                 case 5:
                     main()
         case 2:
-            TournmanetMenu().show()
-
+            choice = TournmanetMenu().show()
+            match choice:
+                case 4:
+                    main()
 main()

@@ -7,5 +7,5 @@ class PlayerMenu(Menu):
                          options=["Créer un joueur",
                                   "Editer le classement d'un joueur",
                                   "Afficher les joueurs par Nom",
-                                  "Afficher les joueurs par classement"
+                                  "Afficher les joueurs par classement",
                                   "Retour"])
